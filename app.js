@@ -9,9 +9,7 @@ const server = createServer(app);
 const io = new Server(server);
 
 
-// app.use(express.json()) // for parsing application/json
-// app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-// app.use(express.static('public'));
+
 app.engine('html', ejs.renderFile);
 app.set('view engine', ejs);
 app.use(express.static('public'));
